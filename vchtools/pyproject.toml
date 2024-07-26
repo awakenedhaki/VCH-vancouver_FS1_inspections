@@ -1,0 +1,9 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tools"
+version = "0.1.0"
+description = "A collection of tools for Vancouver Coastal Health inspection reports project"
+requires-python = ">=3.11.2"
