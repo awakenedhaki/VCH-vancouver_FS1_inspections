@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Facility",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The unique identifier for the facility."
+    },
+    "facilityType": {
+      "type": "string",
+      "description": "The type of facility."
+    },
+    "facilityName": {
+      "type": "string",
+      "description": "The name of the facility."
+    },
+    "siteAddress": {
+      "type": "string",
+      "description": "The address of the facility."
+    },
+    "phoneNumber": {
+      "type": "string",
+      "description": "The phone number of the facility."
+    },
+    "latitude": {
+      "type": "number",
+      "description": "The latitude coordinate of the facility."
+    },
+    "longitude": {
+      "type": "number",
+      "description": "The longitude coordinate of the facility."
+    },
+    "outstandingCriticalInfractions": {
+      "type": "integer",
+      "description": "The number of outstanding critical infractions for the facility."
+    },
+    "outstandingNonCriticalInfractions": {
+      "type": "integer",
+      "description": "The number of outstanding non-critical infractions for the facility."
+    },
+    "totalInfractions": {
+      "type": "integer", 
+      "description": "The total number of infractions for the facility."
+    },
+    "community": {
+      "type": "string",
+      "description": "The community where the facility is located."
+    },
+    "programAreaId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The unique identifier for the program area of the facility."
+    },
+    "website": {
+      "type": ["string", "null"],
+      "description": "The website of the facility."
+    },
+    "tags": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      },
+      "description": "The tags associated with the facility."
+    },
+    "capacity": {
+      "type": ["integer", "null"],
+      "description": "The capacity of the facility."
+    },
+    "closure": {
+      "type": ["string", "null"],
+      "description": "The closure status of the facility."
+    },
+    "primaryOperator": {
+      "type": ["string", "null"],
+      "description": "The primary operator of the facility."
+    },
+    "primaryOwner": {
+      "type": ["string", "null"],
+      "description": "The primary owner of the facility."
+    },
+    "operationsType": {
+      "type": ["string", "null"],
+      "description": "The type of operations of the facility."
+    },
+    "facilityNumber": {
+      "type": ["string", "null"],
+      "description": "The number of the facility."
+    },
+    "faxNumber": {
+      "type": ["string", "null"],
+      "description": "The fax number of the facility."
+    },
+    "hazardScore": {
+      "type": ["number", "null"],
+      "description": "The hazard score of the facility."
+    },
+    "hazardRating": {
+      "type": ["string", "null"],
+      "description": "The hazard rating of the facility."
+    },
+    "hazardRatingModelElementId": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "The unique identifier for the hazard rating model element of the facility."
+    },
+    "lastInspectionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "The date of the last inspection of the facility."
+    },
+    "emailAddress": {
+      "type": ["string", "null"],
+      "description": "The email address of the facility."
+    },
+    "mailingAddress": {
+      "type": ["string", "null"],
+      "description": "The mailing address of the facility."
+    },
+    "riskRating": {
+      "type": ["string", "null"],
+      "description": "The risk rating of the facility."
+    },
+    "numberOfInspections": {
+      "type": ["integer", "null"],
+      "description": "The total number of inspections for the facility."
+    }
+  },
+  "required": [
+    "id",
+    "facilityType",
+    "facilityName",
+    "community",
+    "siteAddress",
+    "phoneNumber",
+    "latitude",
+    "longitude",
+    "outstandingCriticalInfractions",
+    "outstandingNonCriticalInfractions",
+    "totalInfractions",
+    "programAreaId"
+  ]
+}

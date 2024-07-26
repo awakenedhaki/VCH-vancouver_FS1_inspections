@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Report",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "programAreaId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "facilityName": {
+      "type": "string"
+    },
+    "criticalInfractionCount": {
+      "type": "integer"
+    },
+    "inspectionNumber": {
+      "type": "string"
+    },
+    "nonCriticalInfractionCount": {
+      "type": "integer"
+    },
+    "hasInfractions": {
+      "type": "boolean"
+    },
+    "inspectionDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inspectionType": {
+      "type": "string"
+    },
+    "closingComments": {
+      "type": ["string", "null"]
+    },
+    "openingComments": {
+      "type": ["string", "null"]
+    },
+    "inspectionReason": {
+      "type": ["string", "null"]
+    },
+    "inspector": {
+      "type": ["string", "null"]
+    },
+    "hazardScore": {
+      "type": ["number", "null"]
+    },
+    "hazardRating": {
+      "type": ["string", "null"]
+    },
+    "hazardRatingModelElementId": {
+      "type": ["string", "null"]
+    },
+    "actionsTaken": {
+      "type": ["string", "null"]
+    },
+    "actionsTakenList": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "showInspectionDisclaimer": {
+      "type": ["boolean", "null"]
+    },
+    "inspectionDisclaimer": {
+      "type": ["string", "null"]
+    },
+    "groupingOption": {
+      "type": ["string", "null"]
+    },
+    "documentId": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": [
+    "id",
+    "facilityName",
+    "programAreaId",
+    "inspectionDate",
+    "inspectionType",
+    "inspectionNumber",
+    "criticalInfractionCount",
+    "nonCriticalInfractionCount",
+    "hasInfractions"
+  ]
+}

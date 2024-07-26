@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Inspection Report Entry",
+  "description": "A schema for validating inspection report data.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "A unique identifier for the inspection report entry."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of the inspection report entry."
+    },
+    "result": {
+      "type": "string",
+      "description": "The result of the inspection report entry."
+    },
+    "isCritical": {
+      "type": "boolean",
+      "description": "Indicates whether the inspection report entry is marked as critical."
+    },
+    "writtenComment": {
+      "type": ["string", "null"],
+      "description": "A written comment associated with the inspection report entry."
+    },
+    "responseComment": {
+      "type": ["string", "null"],
+      "description": "A response comment to the inspection report entry."
+    },
+    "category": {
+      "type": "object",
+      "description": "The category of the inspection report entry.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "A unique identifier for the category."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the category."
+        }
+      },
+      "required": ["id", "description"]
+    },
+    "cannedComments": {
+      "type": ["array", "null"],
+      "description": "A list of canned comments associated with the inspection report entry.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "A unique identifier for the comment."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of the comment."
+          },
+          "locationComment": {
+            "type": ["string", "null"],
+            "description": "A comment about the location."
+          },
+          "observationComment": {
+            "type": ["string", "null"],
+            "description": "An observation comment."
+          },
+          "readings": {
+            "type": ["integer", "null"],
+            "description": "Readings associated with the comment."
+          },
+          "responseComment": {
+            "type": ["string", "null"],
+            "description": "A response comment."
+          },
+          "severity": {
+            "type": ["string", "null"],
+            "description": "The severity of the comment."
+          }
+        },
+        "required": ["id", "description"]
+      }
+    }
+  },
+  "required": ["id", "description", "result", "isCritical", "category", "cannedComments"]
+}
